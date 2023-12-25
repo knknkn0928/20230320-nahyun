@@ -344,10 +344,10 @@ nav {
             transform: translateX(-10px);
     -webkit-transition: all 0.2s cubic-bezier(.17, .67, .83, .67);
             transition: all 0.2s cubic-bezier(.17, .67, .83, .67); }
-  nav.is-dark a {
+  /* nav.is-dark a {
     color: #212121; }
   nav.is-dark .nav-dot {
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.5); } */
   nav ul {
     margin: 0;
     padding: 0; }
