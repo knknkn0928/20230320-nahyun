@@ -191,7 +191,8 @@ textarea {
 /* Make the body 100% of the browser viewport height */
 html, body {
   height: 100%;
-  margin: 0; }
+  margin: 0; 
+}
 
 h1 {
   font-size: 2em;
@@ -202,9 +203,15 @@ h1 {
 
 /* open */
 
-section article.open {
+.door {
   z-index: 100;
 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.door article.open {
   width: 100%;
   height: 100%;
   
@@ -230,12 +237,12 @@ section article.open {
   100% { -webkit-mask-position: 100% 0% ;}
 }
 
-section.on .open {
+.door.on .open {
   animation: mask-play 1.4s steps(22) forwards;
 }
 
 
-section article.open .open_txt {
+.door article.open .open_txt {
   align-items: center;
   justify-content: space-evenly;
   height: 600px;
@@ -244,7 +251,7 @@ section article.open .open_txt {
   backdrop-filter: blur(2px);
 }
 
-section article.open .open_txt span h2 {
+.door article.open .open_txt span h2 {
   width: 200px;
   color: #fff;
   text-align: center;
@@ -254,13 +261,13 @@ section article.open .open_txt span h2 {
   transition: 1s ease-in-out;
 }
 
-section article.open .open_txt h3 {
+.door article.open .open_txt h3 {
   font-family: 'Pretendard-Regular';
   font-weight: 100;
   font-size: 20px;
 }
 
-section article.open .open_txt img {
+.door article.open .open_txt img {
   object-fit: contain;
   width: 120px;
 }
@@ -271,27 +278,12 @@ section article.open .open_txt img {
   text-align: center;
   color: #ffffff;
   background: url(../images/open_back.jpg) no-repeat center center / cover;
-  /* background: -webkit-gradient(left top, left bottom, color-stop(0%, #512c62), color-stop(100%, #313372)); */
-  /* background: -webkit-linear-gradient(top, #512c62 0%, #313372 100%);
-  background: linear-gradient(to bottom, #512c62 0%, #313372 100%); */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#512c62', endColorstr='#313372', GradientType=0 ); }
   
   .header-container .wrapper {
     padding-top: 120px;
     z-index: 2; }
-  /* .header-container:before {
-    content: '1';
-    display: block;
-    font-size: 30em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: rgba(255, 255, 255, 0.05);
-    z-index: 1;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif; } */
+
 
 /* =Navigation */
 nav {
@@ -303,7 +295,7 @@ nav {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   text-align: right;
-  z-index: 100; }
+  z-index: 99; }
   nav a {
     display: block;
     line-height: 25px;

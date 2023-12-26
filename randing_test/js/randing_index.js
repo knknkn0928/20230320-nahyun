@@ -1,6 +1,5 @@
 const section = document.querySelector('section');
 const open = document.querySelector('.open');
-const menu = document.querySelector('.left');
 
 open.addEventListener('click', e => {
     section.classList.add('on');
